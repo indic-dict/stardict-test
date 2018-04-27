@@ -1,18 +1,12 @@
 STARDICT_TOOLS_DIR=~/stardict/tools/src/
-TABFILE=$(STARDICT_TOOLS_DIR)/tabfile
+STARDICT_SANSKRIT_BIN=~/stardict-sanskrit/bin
 
-ifndef dicts
-	dicts="*"
-endif
+# make all DICTS=xyz
+DICTS=.*
 
 .PHONY: all stardict tars
 
 all:stardict tars
 
 stardict:
-	eval $(TABFILE) $(dicts)/*.tsv
-	eval dictunzip $(dicts)/*.dz
-
-tars:
-	bash ../bin/make_tarballs.sh https://github.com/vvasuki/stardict-sanskrit/raw/master/sa-head
-
+	bash ~/stardict-sanskrit/bin/tsv_to_stardict.sh DICTS=$(DICTS)
