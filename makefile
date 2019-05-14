@@ -1,5 +1,5 @@
 STARDICT_TOOLS_DIR=~/stardict/tools/src/
-STARDICT_SANSKRIT_BIN=~/stardict-sanskrit/bin
+DICT_TOOLS_BIN_BASH=~/dict-tools/bin/bash
 
 # make all DICTS=xyz
 DICTS=.*
