@@ -9,4 +9,4 @@ DICTS=.*
 all:stardict tars
 
 stardict:
-	bash ~/stardict-sanskrit/bin/tsv_to_stardict.sh DICTS=$(DICTS)
+	bash $(DICT_TOOLS_BIN_BASH)/tsv_to_stardict.sh DICTS=$(DICTS)
