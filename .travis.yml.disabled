@@ -9,10 +9,10 @@ git:
   depth: 1
 
 script: 
-  - make all
+  - make full
 
 deploy:      
   provider: pages
-  skip_cleanup: false
+  skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: false
+  keep_history: true
